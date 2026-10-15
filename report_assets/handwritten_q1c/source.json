@@ -1,0 +1,81 @@
+{
+  "source_pdf": "C:\\Users\\alber\\OneDrive\\Documents\\Quest_1(c).pdf",
+  "source_pdf_sha256": "3a26d4c8f925b5f5d39c51d2ca7f6cb0604209d889339616a89df84d36fda6f2",
+  "pages": [
+    {
+      "source_page": 1,
+      "path": "report_assets\\handwritten_q1c\\page_1.jpeg",
+      "width": 2588,
+      "height": 3288,
+      "sha256": "a676959df7e142c8c0d0284446e0c008b2f98e79b602ade7b173e62ec932c5fa"
+    },
+    {
+      "source_page": 2,
+      "path": "report_assets\\handwritten_q1c\\page_2.jpeg",
+      "width": 2568,
+      "height": 3336,
+      "sha256": "3570afe729b6a8675cd13354c5605e46c7a92a9e67c39617cc47d9342c5d5018"
+    },
+    {
+      "source_page": 3,
+      "path": "report_assets\\handwritten_q1c\\page_3.jpeg",
+      "width": 2460,
+      "height": 3304,
+      "sha256": "92a238a950f6a8b94a243e017b7a820fa81353e56a79d19f08595b44e7ae2d84"
+    },
+    {
+      "source_page": 4,
+      "path": "report_assets\\handwritten_q1c\\page_4.jpeg",
+      "width": 2860,
+      "height": 3580,
+      "sha256": "5ad39be4bf194186ed95a1416576eb692f834e7a44a8e76e294c6d5474aa7c8e"
+    },
+    {
+      "source_page": 5,
+      "path": "report_assets\\handwritten_q1c\\page_5.jpeg",
+      "width": 2928,
+      "height": 3652,
+      "sha256": "d9b45c4331b9e99e3437da2000b2e85f0893b380b73a88d121521d9b6be9f96f"
+    }
+  ],
+  "before_cell_hashes": [
+    "5226fa2a4c822989bee12afb957af0435ae108cbd39626077697dcc23d559439",
+    "8f36542aafd4142816ed8724983fabd98c2f3b685583b40518d7da11d1e7bd69",
+    "627011ae89d671e79e4483d5fb304e9733a5e244ffee658e2f573892bce480f6",
+    "e212bb1dd0f51de1fc48dcf60949a037050e4b858d9f997932f44b8eadd7e0e1",
+    "ac89d3ef6df5d991dbf006370c81c3e94b9ff2afa0914744d286223c52704669",
+    "c4bdc6d2138c3a9ab3a60a03b7907a8e5b7ce12fcd8c1d2cfaeee49b883d958f",
+    "74931a836e222fc85af895866b7555617402fbebd34208dddc8cf192686195d9",
+    "7ddc0d8809265d6a95235f1987558f5c8880fc7ffa1f770b6923e538345ba7b3",
+    "4b01848597dc241c3b82a9c7415adcb93e552a5b2f3d2b0024a91acc8d0d1eea",
+    "efe5b3061163a0d6505e2a466af01bb3205049c07cfbddc30a3c7f4c9c3d5719",
+    "b64f2cac219f4a78bc651fb808f6c52acdb582b023a086f91d995a25fad000de",
+    "182e15c6fb823411f21e0ae99bbce135856d026c4e702d72ef4d2ef61599f7a1",
+    "f1f4ce1f2ac12035f9f252a21186baa0d5ab1da895d697d76c5b93a3a8998457",
+    "e2fca68535c9776af602062058bd892b280a014adbd6c053fae7fa2a74c8c738",
+    "c04a5e8a03943df1a32c3e2b2edd08935dd759f9f4bbdbea746f2d34c2762f72",
+    "ab6f13bbb17c580864848dfc5433e9217699381defaacf6ddcb02bdb21222643",
+    "d6ac9c34717d629e694a6e91edea5bd92df6fc9202ccc6e20b3f8396fc7a3dcc",
+    "d0ca100835d32bcc091c2ded17223f6850e45d662d73d11b72ee55bf79bd30d7",
+    "5341c4a9c2557b8057ac8af2408288132828e1e13c88b082488ff781587376b2",
+    "fcbc826afac508a4cc198c7562e20a9e24a2b8020d07947ace0ffaa5cdc63ad0",
+    "bfe025ce4249748b2250910a314a6a2f38abc0bc711e05d9f6aaf754f96d6e4d",
+    "13e34688f4542ceb4dced1523a1b1159167874f4aabc1dc5bec310e17a70f541",
+    "ea57c32f2ce22f3b45416d49c41feda83cf0961cee3e73dc6f901d1ba41c4816",
+    "afec72535cf0602985cf9d4a88a776c25598d3ff11da96566daa0aee1f55cc1f",
+    "4605fdd1218187389d12288378402c3f1f0dce1ab7de5fe3570fffe556050126",
+    "3941ad7a7106f5a942bf3fe7dcdc988e9384d412488f501d66a874b2ac9c3aa1",
+    "cb5210304de4edb380fb257b6bdf3f59e4ef0ec6e559cba78cede52db40f41b9",
+    "131c143d1b82f920670c4305d636385a5a12171bb3c3f6006d692f54416b4617",
+    "7b349bf1698e628ae7a26979759b89e46106071845ae2cc664cb9504259c6cc0",
+    "e0cb3cf4497c77205af9f35f19f8dc3be053e39d3c8b0c07178f496a47218dad",
+    "9b381331b157a874cdbfa488ebdcee8762b97d4f2379d826a624d604c3e8ec98",
+    "56fdc7d1374bbd8caf28743baa9520c295a5dc4a2f605e84e3cc2e50ba5eabce",
+    "52f79bcd2898670707ee065be36e3a7192e9ea89ec365d56405e3d3222f8f4d5"
+  ],
+  "before_q1c_source": "## Question 1(c)\n\n### 4\u00d74 Operator Using the Kronecker Product Formulation\n\nThe first gate is H on q0: I \u2297 H. The second is H on q1: H \u2297 I. Thus U = (H \u2297 I)(I \u2297 H) = H \u2297 H.\n\nEach H contains a factor 1/\u221a2. Their product is (1/\u221a2)(1/\u221a2) = 1/(\u221a2\u00d7\u221a2) = 1/2. In the block table, the minus sign in the lower-right block multiplies every entry.\n\n$$ H = \\frac1{\\sqrt2}\\begin{bmatrix}1 & 1\\\\1 & -1\\end{bmatrix}. $$\n\n**Single-qubit actions:**\n\nMultiply the two matrix rows by the input column. These are the only single-qubit actions needed for this part.\n\n**Input $H|0\\rangle$:**\n\n$$ (1/\\sqrt{2})[1\\cdot1 + 1\\cdot0] = 1/\\sqrt{2} $$\n\n$$ (1/\\sqrt{2})[1\\cdot1 + (-1)\\cdot0] = 1/\\sqrt{2} $$\n\nTherefore $ H|0\\rangle = (|0\\rangle + |1\\rangle)/\\sqrt{2} $.\n\n**Input $H|1\\rangle$:**\n\n$$ (1/\\sqrt{2})[1\\cdot0 + 1\\cdot1] = 1/\\sqrt{2} $$\n\n$$ (1/\\sqrt{2})[1\\cdot0 + (-1)\\cdot1] = -1/\\sqrt{2} $$\n\nTherefore $ H|1\\rangle = (|0\\rangle - |1\\rangle)/\\sqrt{2} $.\n\n**Kronecker product expansion:**\n\nEach entry of the left factor multiplies **every** entry of the right factor.\n\n**Upper-left block:**\n\n$$ (1/\\sqrt{2})H = \\begin{bmatrix}(1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (1/\\sqrt{2})\\cdot(1/\\sqrt{2})\\\\(1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (1/\\sqrt{2})\\cdot(-1/\\sqrt{2})\\end{bmatrix} $$\n\n$$ = \\frac12\\begin{bmatrix}1 & 1\\\\1 & -1\\end{bmatrix}. $$\n\n**Upper-right block:**\n\n$$ (1/\\sqrt{2})H = \\begin{bmatrix}(1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (1/\\sqrt{2})\\cdot(1/\\sqrt{2})\\\\(1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (1/\\sqrt{2})\\cdot(-1/\\sqrt{2})\\end{bmatrix} $$\n\n$$ = \\frac12\\begin{bmatrix}1 & 1\\\\1 & -1\\end{bmatrix}. $$\n\n**Lower-left block:**\n\n$$ (1/\\sqrt{2})H = \\begin{bmatrix}(1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (1/\\sqrt{2})\\cdot(1/\\sqrt{2})\\\\(1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (1/\\sqrt{2})\\cdot(-1/\\sqrt{2})\\end{bmatrix} $$\n\n$$ = \\frac12\\begin{bmatrix}1 & 1\\\\1 & -1\\end{bmatrix}. $$\n\n**Lower-right block:**\n\n$$ (-1/\\sqrt{2})H = \\begin{bmatrix}(-1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (-1/\\sqrt{2})\\cdot(1/\\sqrt{2})\\\\(-1/\\sqrt{2})\\cdot(1/\\sqrt{2}) & (-1/\\sqrt{2})\\cdot(-1/\\sqrt{2})\\end{bmatrix} $$\n\n$$ = \\frac12\\begin{bmatrix}-1 & -1\\\\-1 & 1\\end{bmatrix}. $$\n\nPlace the upper two blocks side by side, then the lower two blocks:\n\n$$ U = H \\otimes H = \\frac12\\begin{bmatrix}1 & 1 & 1 & 1\\\\1 & -1 & 1 & -1\\\\1 & 1 & -1 & -1\\\\1 & -1 & -1 & 1\\end{bmatrix}. $$\n\n### Action of the Operator on the Kets: |00\u27e9, |01\u27e9, |10\u27e9, |11\u27e9\n\nUse the single-qubit actions above. Multiply any scalar phases and distribute tensor products before combining the two bits.\n\n**Input $|00\\rangle$:**\n\n$$ U|00\\rangle = (H|0\\rangle) \\otimes (H|0\\rangle) $$\n\n$$  = [(|0\\rangle + |1\\rangle)/\\sqrt{2}] \\otimes [(|0\\rangle + |1\\rangle)/\\sqrt{2}] $$\n\n$$  = (1/2)[(|0\\rangle \\otimes |0\\rangle) + (|0\\rangle \\otimes |1\\rangle) + (|1\\rangle \\otimes |0\\rangle) + (|1\\rangle \\otimes |1\\rangle)] $$\n\n$$  = (1/2)(|00\\rangle + |01\\rangle + |10\\rangle + |11\\rangle) $$\n\n**Input $|01\\rangle$:**\n\n$$ U|01\\rangle = (H|0\\rangle) \\otimes (H|1\\rangle) $$\n\n$$  = [(|0\\rangle + |1\\rangle)/\\sqrt{2}] \\otimes [(|0\\rangle - |1\\rangle)/\\sqrt{2}] $$\n\n$$  = (1/2)[(|0\\rangle \\otimes |0\\rangle) - (|0\\rangle \\otimes |1\\rangle) + (|1\\rangle \\otimes |0\\rangle) - (|1\\rangle \\otimes |1\\rangle)] $$\n\n$$  = (1/2)(|00\\rangle - |01\\rangle + |10\\rangle - |11\\rangle) $$\n\n**Input $|10\\rangle$:**\n\n$$ U|10\\rangle = (H|1\\rangle) \\otimes (H|0\\rangle) $$\n\n$$  = [(|0\\rangle - |1\\rangle)/\\sqrt{2}] \\otimes [(|0\\rangle + |1\\rangle)/\\sqrt{2}] $$\n\n$$  = (1/2)[(|0\\rangle \\otimes |0\\rangle) + (|0\\rangle \\otimes |1\\rangle) - (|1\\rangle \\otimes |0\\rangle) - (|1\\rangle \\otimes |1\\rangle)] $$\n\n$$  = (1/2)(|00\\rangle + |01\\rangle - |10\\rangle - |11\\rangle) $$\n\n**Input $|11\\rangle$:**\n\n$$ U|11\\rangle = (H|1\\rangle) \\otimes (H|1\\rangle) $$\n\n$$  = [(|0\\rangle - |1\\rangle)/\\sqrt{2}] \\otimes [(|0\\rangle - |1\\rangle)/\\sqrt{2}] $$\n\n$$  = (1/2)[(|0\\rangle \\otimes |0\\rangle) - (|0\\rangle \\otimes |1\\rangle) - (|1\\rangle \\otimes |0\\rangle) + (|1\\rangle \\otimes |1\\rangle)] $$\n\n$$  = (1/2)(|00\\rangle - |01\\rangle - |10\\rangle + |11\\rangle) $$\n\n### Probability Measurements\n\nThe initialized input is $|00\\rangle=(1,0,0,0)^T$. Keep all four row products visible:\n\n$$ U|00\\rangle = \\frac12\\begin{bmatrix}1 & 1 & 1 & 1\\\\1 & -1 & 1 & -1\\\\1 & 1 & -1 & -1\\\\1 & -1 & -1 & 1\\end{bmatrix}\\begin{bmatrix}1\\\\0\\\\0\\\\0\\end{bmatrix}. $$\n\n**Row 1:** $ (1/2)[1\\cdot1 + 1\\cdot0 + 1\\cdot0 + 1\\cdot0] = 1/2 $.\n\n**Row 2:** $ (1/2)[1\\cdot1 + (-1)\\cdot0 + 1\\cdot0 + (-1)\\cdot0] = 1/2 $.\n\n**Row 3:** $ (1/2)[1\\cdot1 + 1\\cdot0 + (-1)\\cdot0 + (-1)\\cdot0] = 1/2 $.\n\n**Row 4:** $ (1/2)[1\\cdot1 + (-1)\\cdot0 + (-1)\\cdot0 + 1\\cdot0] = 1/2 $.\n\n$$ |\\psi_f\\rangle = \\frac12\\begin{bmatrix}1\\\\1\\\\1\\\\1\\end{bmatrix} = (1/2)(|00\\rangle + |01\\rangle + |10\\rangle + |11\\rangle). $$\n\n**Probability measurements and normalization:**\n\nTake the squared magnitude of each output amplitude, rather than the amplitude itself:\n\n$P(00) = |1/2|^2 = (1/2)(1/2) = 1/4$.\n\n$P(01) = |1/2|^2 = (1/2)(1/2) = 1/4$.\n\n$P(10) = |1/2|^2 = (1/2)(1/2) = 1/4$.\n\n$P(11) = |1/2|^2 = (1/2)(1/2) = 1/4$.\n\n$$ 1/4 + 1/4 + 1/4 + 1/4 = 1. $$\n\nFor the other basis inputs above, each of the four coefficients is +1/2 or \u22121/2. Squaring either sign gives (\u00b11/2)\u00b2 = 1/4, so every input has the same four basis probabilities.",
+  "word_before_q1c": "82f48873dfc2eafb9a8ad4a4f98bd85b7b85afd60e40050cd58e3a2f1b9f0711",
+  "word_from_q1d": "77bc94528a793e947baf98c8abb6bd78f11afb1c9231760e35943d8646e5e090",
+  "pdf_before_q1c": "7c217c970787b21f1105d93287797d10c64e0f13724aba875edaafe3085615a5",
+  "pdf_from_q1d": "daa8fc5d3a5f6ed6e5d11c51861a328d1e3026173c9d3a4e7dcf47db00152752"
+}

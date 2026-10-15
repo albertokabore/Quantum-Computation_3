@@ -1,141 +1,92 @@
-# Assignment 3 review
+# Assignment and handwritten-page review
 
-The original Question 1 calculations were correct. Question 2 contained a substantive
-circuit-reading error that affected the code, tests, notebook, PDF, and histogram.
-That error is corrected throughout. Question 3 now explains the physical qubit more
-precisely and distinguishes hardware measurements from the ideal simulator used here.
+The supplied assignment image is saved in `Assignment3_Instructions.md`.
+The lecture material was not supplied; mathematical checks use the
+Kronecker-product definition and Qiskit.
 
-## Check against the attached instructions
+## Current reports
 
-| Requirement | Reviewed result |
-|---|---|
-| Derive a 4 by 4 operator for each Q1 circuit using Kronecker products | All four are correct. The PDF now explains the general block construction, tensor-factor ordering, and gate multiplication order. |
-| Predict each operator's action on 00, 01, 10, 11 | All 16 actions are included, with intermediate product steps. The tests check every action against independent expected amplitudes. |
-| Predict all four measurement probabilities | Each Q1 part lists amplitudes, their squared magnitudes, expected counts, and observed frequencies for the default input 00. The actions also determine probabilities for other basis inputs. |
-| Include Qiskit histogram snapshots | All four Q1 histograms are embedded in the PDF, with 1024 shots, simulator name, and all four outcome labels. Q2 also has a corrected circuit and histogram. |
-| Find Q2's output state for input 00 | Corrected to the entangled Bell state `(00 + 11)/sqrt(2)`, with a step-by-step derivation and explicit operator. |
-| Brief research on IBM's representation of qubits | Two paragraphs describe transmons, energy levels, control, readout, and practical imperfections, followed by four linked primary references. |
-| Submit one PDF to Canvas | `Assignment3.pdf` contains all answers and figures. The student name still needs to be filled in. No Canvas upload was performed. |
+- [Assignment3.pdf](Assignment3.pdf): 30 pages.
+- [Assignment3.docx](report_assets/runtime/pending_reports/Assignment3.docx):
+  the updated Word copy while Windows blocks replacement of the older root file.
 
-## Question 1: verified answers
+Both reports contain the actual handwritten images from the user's PDFs:
 
-The basis is ordered `|00>, |01>, |10>, |11>`, with each ket written `|q1 q0>`.
-Thus qubit 0 is the right tensor factor: `x(0)` has operator `I tensor X`.
-This matches [IBM's bit-ordering documentation](https://quantum.cloud.ibm.com/docs/en/guides/bit-ordering).
+| Answer | Source file | Pages in the report PDF |
+|---|---|---|
+| Question 1(a) | Question_1(a).pdf | 3-6 |
+| Question 1(b) | Question_1(b)__.pdf | 9-12 |
+| Question 1(c) | Quest_1(c).pdf | 15-19 |
+| Question 2 | Question_2.pdf | 26-27 |
 
-The following table lists probabilities in that same basis order, for input `|00>`.
+The missing upper-right block in Q1(a) and the sign clarification beneath
+Q1(c)'s second handwritten page remain unchanged. All existing verification
+code, output vectors, comparison tables, actual counts, and histograms are retained.
 
-| Part | Operator | Output | P(00), P(01), P(10), P(11) |
-|---|---|---|---|
-| (a) `x(0); x(1)` | X tensor X | `|11>` | 0, 0, 0, 1 |
-| (b) `x(0)` | I tensor X | `|01>` | 0, 1, 0, 0 |
-| (c) `h(0); h(1)` | H tensor H | `( |00> + |01> + |10> + |11> ) / 2` | 1/4, 1/4, 1/4, 1/4 |
-| (d) `z(0); y(1)` | Y tensor Z | `i|10>` | 0, 0, 1, 0 |
+## Question 2 update
 
-For (a), the basis actions are `00 -> 11`, `01 -> 10`, `10 -> 01`, and `11 -> 00`.
-For (b), they are `00 -> 01`, `01 -> 00`, `10 -> 11`, and `11 -> 10`.
+Both attached pages were inspected and included intact in their original order.
+They replace the corresponding typed calculations and cover all three steps:
+apply H to q0, apply the controlled-X with q0 controlling q1, and state the
+output vector. The second page includes normalization and distinguishes the
+coherent state before measurement from the conditional states after measurement.
+No supplementary answer text was needed. The Qiskit verification and the circuit
+image remain immediately after the handwritten pages.
 
-For (c), the four columns of the operator give these outputs:
+The handwritten intermediate vector [1,1,0,0]/sqrt(2), the controlled-X matrix,
+and the final vector [1,0,0,1]/sqrt(2) were independently compared with Qiskit
+and agree. The final probabilities are 1/2 for 00 and 11 and zero for 01 and 10.
 
-```text
-00 -> ( |00> + |01> + |10> + |11> ) / 2
-01 -> ( |00> - |01> + |10> - |11> ) / 2
-10 -> ( |00> + |01> - |10> - |11> ) / 2
-11 -> ( |00> - |01> - |10> + |11> ) / 2
-```
+Preservation and export checks passed:
 
-Each amplitude has magnitude 1/2, so its squared magnitude is 1/4 for every input.
-The signs affect relative phases while leaving these computational-basis probabilities unchanged.
+- Only notebook cell index 27 changed. All 32 other full cells, including code,
+  results, and images, match the hashes recorded before this update.
+- PDF text before Question 2 and from Question 3 onward matches the previous
+  report, excluding footers. The corresponding Word XML matches after normalizing
+  image and hyperlink identifiers.
+- Both reports contain 15 handwritten images and five original figures. Word
+  image bytes match the notebook export. PDF handwritten image bytes and decoded
+  figure pixels match it as well.
+- Both reports retain four tables and 24 assignment headings. Word contains
+  68 native editable equations for the remaining typed work. All typed PDF
+  equations fit at their normal scale.
+- The Word archive passed its integrity check. PDF image bounds stay inside
+  the margins, and each histogram comment remains with its figure.
+- Both Question 2 report pages were rendered and visually inspected.
+- The attached PDF and both extracted scan images retain their original
+  checksums. The new images are embedded at full source resolution without
+  resizing or recompression. Earlier image settings are unchanged.
 
-For (d), the phase-sensitive actions are:
+Source provenance and preservation hashes are stored in
+`report_assets/handwritten_q2/source.json`. Current verification results are in
+`report_assets/handwritten_q2/verification.json` and
+`report_assets/preview/correction_verification.json`.
 
-```text
-00 ->  i|10>
-01 -> -i|11>
-10 -> -i|00>
-11 ->  i|01>
-```
+## Execution and assignment coverage
 
-These follow from `Y|0> = i|1>`, `Y|1> = -i|0>`, and `Z|1> = -|1>`.
-The coefficient `i` on the output for input 00 is a global phase and has magnitude 1.
-For a superposition input, the relative signs in the full operator must still be retained.
-
-The part (c) simulation gives counts `264, 275, 252, 233`. Each outcome has expected
-count 256 and marginal standard deviation `sqrt(1024 * 1/4 * 3/4) = 13.86`.
-The largest observed deviation is 23 counts, about 1.66 standard deviations.
-These results are consistent with finite-shot sampling of a uniform distribution.
-The other Q1 circuits give exactly 1024 counts at their one allowed outcome on the ideal simulator.
-
-## Question 2: corrected control gate
-
-The attached diagram contains a filled control dot on the q0 wire, connected vertically
-to the X on q1. This is CNOT, with q0 as control and q1 as target.
-The original `qc.x(1)` treated the target flip as unconditional and therefore solved
-a different circuit. Its answer `( |10> + |11> ) / sqrt(2)` was incorrect for the assignment.
-The original Q2 test expected that same answer, so it could not detect the interpretation error.
-
-The corrected sequence is:
-
-```python
-qc = QuantumCircuit(2, 2)
-qc.barrier()
-qc.h(0)
-qc.cx(0, 1)
-qc.barrier()
-qc.measure([0, 1], [0, 1])
-```
-
-The state before measurement evolves as follows:
+All 10 code cells executed successfully and reproduced every previous output
+exactly. The independent 35-test suite passed during the earlier assignment
+review; it was not rerun for this image-only update. The notebook checksum
+recorded in `results.json` matches the saved notebook:
 
 ```text
-|00> --H on q0--> ( |00> + |01> ) / sqrt(2)
-     --CX(0,1)--> ( |00> + |11> ) / sqrt(2)
+b5a0f203d8dd8d80c5f62b9c8140147bab614dfcd725fb298fc3064d7ac06481
 ```
 
-CNOT leaves the branch with q0 = 0 unchanged and flips q1 on the branch with q0 = 1.
-The final vector is `(1, 0, 0, 1)^T / sqrt(2)`, in the stated basis.
-It is a Bell state: each qubit separately has equal probabilities for 0 and 1,
-and their measurement results are perfectly correlated. The corrected histogram contains
-516 counts for 00 and 508 for 11, with zero counts for 01 and 10.
-Each allowed outcome has expected count 512 and marginal standard deviation 16.
+Question 1 retains all four supplied circuits, their operators, all 16 basis
+ket actions, four measurement probabilities per circuit, and four Qiskit
+histograms. The operators are X tensor X, I tensor X, H tensor H, and Y tensor Z
+in q1q0 basis order. The ideal AerSimulator uses 1024 shots and seed 2026. Counts
+are actual simulator results, not IBM hardware measurements. Predictions and
+expected counts are labeled separately.
 
-Because the diagram includes measurement, the report distinguishes the coherent vector
-before measurement from the result after measurement. A single ideal run ends in 00 or 11;
-discarding the outcome record gives the mixture `diag(1/2, 0, 0, 1/2)`.
-A histogram in this basis verifies the probabilities but does not by itself certify entanglement;
-the ideal statevector calculation establishes coherence for this circuit.
+Question 2 retains the assigned circuit and the output (00 + 11)/sqrt(2) before
+measurement. Conditional measurements give 00 or 11 with probability 1/2 each.
+Question 3 retains its two paragraphs and previously verified references.
 
-## Question 3: scientific corrections and sources
+## Word file limitation
 
-The original text correctly identified superconducting transmons, but several statements
-needed qualification:
-
-- Frequency selectivity and pulse shaping suppress leakage into higher levels; they do not
-  guarantee that leakage is zero.
-- Hardware readout returns a classified bit. One measurement does not determine both complex
-  amplitudes of an unknown qubit state.
-- The assignment's counts come from an ideal Aer simulator, rather than an IBM device's physical
-  readout resonators. The simulator here includes no hardware noise model.
-- The broad claim that all virtual Z rotations add no error and the claim that every nonadjacent
-  gate necessarily requires SWAP insertion were removed. Neither is needed to explain the
-  physical representation of a qubit.
-
-The revised two-paragraph answer focuses on the circuit's two lowest energy states,
-normalized superpositions, charge-noise suppression, cooling, microwave control, and readout.
-Its linked references are
-[IBM's hardware course](https://quantum.cloud.ibm.com/learning/en/courses/quantum-computing-in-practice/running-quantum-circuits),
-[Koch et al.'s transmon paper](https://doi.org/10.1103/PhysRevA.76.042319),
-[Blais et al.'s circuit-QED review](https://doi.org/10.1103/RevModPhys.93.025005), and
-[IBM's account of its cryogenic systems](https://www.ibm.com/quantum/blog/quantum-five-years).
-
-## Validation
-
-- `python -m pytest -q`: **35 tests passed**. Checks cover all Q1 operators, unitarity,
-  all 16 Q1 basis actions, output states, measurement probabilities, and allowed sampled outcomes.
-  Q2 checks cover its full operator, Bell amplitudes, reduced-state purity, and measurement correlations.
-- `python make_report.py`: regenerated the PDF, JSON results, circuit diagrams, and histograms.
-- Executed all six code cells in `Assignment3.ipynb` and saved their fresh outputs.
-- Inspected the generated PDF pages for readable equations, tables, figures, and complete answers.
-
-Only the single PDF is required for submission. The notebook, JSON, source, tests, and this review
-support reproducibility and explanation.
+Both reports were staged before replacing the current PDF and updated Word
+copy. Windows still prevents replacing the older root `Assignment3.docx`.
+Use the updated Word report linked above; the root document does not contain
+this update. No application was force-closed.

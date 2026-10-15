@@ -1,0 +1,66 @@
+{
+  "source_pdf": "C:\\Users\\alber\\OneDrive\\Documents\\Question_1(b)__.pdf",
+  "source_pdf_sha256": "c2f615b9b86f2e40895844fc1ad40b0808d8a40636c727f781b73100f7d7eeb1",
+  "pages": [
+    {
+      "source_page": 1,
+      "path": "report_assets\\handwritten_q1b\\page_1.jpeg",
+      "sha256": "8103e131039c54c603e0f029d5c3b7b78a09213830f81f7edcacb444efd97f76"
+    },
+    {
+      "source_page": 2,
+      "path": "report_assets\\handwritten_q1b\\page_2.jpeg",
+      "sha256": "02660dee6eb82c0e6f2a394045312b2463186f829bfdb1cf47015a939e43ec2c"
+    },
+    {
+      "source_page": 3,
+      "path": "report_assets\\handwritten_q1b\\page_3.jpeg",
+      "sha256": "78384cc3ba961aa63d30299fc26723041a8465aabaea59c6f452b00476282139"
+    },
+    {
+      "source_page": 4,
+      "path": "report_assets\\handwritten_q1b\\page_4.jpeg",
+      "sha256": "a1d37f28bd53eed29811611cb3648df1b866ee06df986b8aa04332ef24c7de6c"
+    }
+  ],
+  "before_cell_hashes": [
+    "5226fa2a4c822989bee12afb957af0435ae108cbd39626077697dcc23d559439",
+    "8f36542aafd4142816ed8724983fabd98c2f3b685583b40518d7da11d1e7bd69",
+    "627011ae89d671e79e4483d5fb304e9733a5e244ffee658e2f573892bce480f6",
+    "e212bb1dd0f51de1fc48dcf60949a037050e4b858d9f997932f44b8eadd7e0e1",
+    "ac89d3ef6df5d991dbf006370c81c3e94b9ff2afa0914744d286223c52704669",
+    "c4bdc6d2138c3a9ab3a60a03b7907a8e5b7ce12fcd8c1d2cfaeee49b883d958f",
+    "74931a836e222fc85af895866b7555617402fbebd34208dddc8cf192686195d9",
+    "7ddc0d8809265d6a95235f1987558f5c8880fc7ffa1f770b6923e538345ba7b3",
+    "4b01848597dc241c3b82a9c7415adcb93e552a5b2f3d2b0024a91acc8d0d1eea",
+    "e070c4c49d34deafc08777f24feacf76d96445773813fbb23deed1178238a379",
+    "b64f2cac219f4a78bc651fb808f6c52acdb582b023a086f91d995a25fad000de",
+    "182e15c6fb823411f21e0ae99bbce135856d026c4e702d72ef4d2ef61599f7a1",
+    "f1f4ce1f2ac12035f9f252a21186baa0d5ab1da895d697d76c5b93a3a8998457",
+    "e2fca68535c9776af602062058bd892b280a014adbd6c053fae7fa2a74c8c738",
+    "c04a5e8a03943df1a32c3e2b2edd08935dd759f9f4bbdbea746f2d34c2762f72",
+    "ab6f13bbb17c580864848dfc5433e9217699381defaacf6ddcb02bdb21222643",
+    "d6ac9c34717d629e694a6e91edea5bd92df6fc9202ccc6e20b3f8396fc7a3dcc",
+    "d0ca100835d32bcc091c2ded17223f6850e45d662d73d11b72ee55bf79bd30d7",
+    "5341c4a9c2557b8057ac8af2408288132828e1e13c88b082488ff781587376b2",
+    "fcbc826afac508a4cc198c7562e20a9e24a2b8020d07947ace0ffaa5cdc63ad0",
+    "bfe025ce4249748b2250910a314a6a2f38abc0bc711e05d9f6aaf754f96d6e4d",
+    "13e34688f4542ceb4dced1523a1b1159167874f4aabc1dc5bec310e17a70f541",
+    "ea57c32f2ce22f3b45416d49c41feda83cf0961cee3e73dc6f901d1ba41c4816",
+    "afec72535cf0602985cf9d4a88a776c25598d3ff11da96566daa0aee1f55cc1f",
+    "4605fdd1218187389d12288378402c3f1f0dce1ab7de5fe3570fffe556050126",
+    "3941ad7a7106f5a942bf3fe7dcdc988e9384d412488f501d66a874b2ac9c3aa1",
+    "cb5210304de4edb380fb257b6bdf3f59e4ef0ec6e559cba78cede52db40f41b9",
+    "131c143d1b82f920670c4305d636385a5a12171bb3c3f6006d692f54416b4617",
+    "7b349bf1698e628ae7a26979759b89e46106071845ae2cc664cb9504259c6cc0",
+    "e0cb3cf4497c77205af9f35f19f8dc3be053e39d3c8b0c07178f496a47218dad",
+    "9b381331b157a874cdbfa488ebdcee8762b97d4f2379d826a624d604c3e8ec98",
+    "56fdc7d1374bbd8caf28743baa9520c295a5dc4a2f605e84e3cc2e50ba5eabce",
+    "52f79bcd2898670707ee065be36e3a7192e9ea89ec365d56405e3d3222f8f4d5"
+  ],
+  "before_q1b_source": "## Question 1(b)\n\n### 4\u00d74 Operator Using the Kronecker Product Formulation\n\nOnly q0 receives X; q1 receives I. Thus U = I \u2297 X.\n\nThe entries of I are 1,0,0,1. They scale the four blocks in that order.\n\n$$ I = \\begin{bmatrix}1 & 0\\\\0 & 1\\end{bmatrix}, \\qquad X = \\begin{bmatrix}0 & 1\\\\1 & 0\\end{bmatrix}. $$\n\n**Single-qubit actions:**\n\nMultiply the two matrix rows by the input column. These are the only single-qubit actions needed for this part.\n\n**Input $I|0\\rangle$:**\n\n$$ 1\\cdot1 + 0\\cdot0 = 1 $$\n\n$$ 0\\cdot1 + 1\\cdot0 = 0 $$\n\nTherefore $ I|0\\rangle = |0\\rangle $.\n\n**Input $I|1\\rangle$:**\n\n$$ 1\\cdot0 + 0\\cdot1 = 0 $$\n\n$$ 0\\cdot0 + 1\\cdot1 = 1 $$\n\nTherefore $ I|1\\rangle = |1\\rangle $.\n\n**Input $X|0\\rangle$:**\n\n$$ 0\\cdot1 + 1\\cdot0 = 0 $$\n\n$$ 1\\cdot1 + 0\\cdot0 = 1 $$\n\nTherefore $ X|0\\rangle = |1\\rangle $.\n\n**Input $X|1\\rangle$:**\n\n$$ 0\\cdot0 + 1\\cdot1 = 1 $$\n\n$$ 1\\cdot0 + 0\\cdot1 = 0 $$\n\nTherefore $ X|1\\rangle = |0\\rangle $.\n\n**Kronecker product expansion:**\n\nEach entry of the left factor multiplies **every** entry of the right factor.\n\n**Upper-left block:**\n\n$$ (1)X = \\begin{bmatrix}(1)\\cdot(0) & (1)\\cdot(1)\\\\(1)\\cdot(1) & (1)\\cdot(0)\\end{bmatrix} $$\n\n$$ = \\begin{bmatrix}0 & 1\\\\1 & 0\\end{bmatrix}. $$\n\n**Upper-right block:**\n\n$$ (0)X = \\begin{bmatrix}(0)\\cdot(0) & (0)\\cdot(1)\\\\(0)\\cdot(1) & (0)\\cdot(0)\\end{bmatrix} $$\n\n$$ = \\begin{bmatrix}0 & 0\\\\0 & 0\\end{bmatrix}. $$\n\n**Lower-left block:**\n\n$$ (0)X = \\begin{bmatrix}(0)\\cdot(0) & (0)\\cdot(1)\\\\(0)\\cdot(1) & (0)\\cdot(0)\\end{bmatrix} $$\n\n$$ = \\begin{bmatrix}0 & 0\\\\0 & 0\\end{bmatrix}. $$\n\n**Lower-right block:**\n\n$$ (1)X = \\begin{bmatrix}(1)\\cdot(0) & (1)\\cdot(1)\\\\(1)\\cdot(1) & (1)\\cdot(0)\\end{bmatrix} $$\n\n$$ = \\begin{bmatrix}0 & 1\\\\1 & 0\\end{bmatrix}. $$\n\nPlace the upper two blocks side by side, then the lower two blocks:\n\n$$ U = I \\otimes X = \\begin{bmatrix}0 & 1 & 0 & 0\\\\1 & 0 & 0 & 0\\\\0 & 0 & 0 & 1\\\\0 & 0 & 1 & 0\\end{bmatrix}. $$\n\n### Action of the Operator on the Kets: |00\u27e9, |01\u27e9, |10\u27e9, |11\u27e9\n\nUse the single-qubit actions above. Multiply any scalar phases and distribute tensor products before combining the two bits.\n\n**Input $|00\\rangle$:**\n\n$$ U|00\\rangle = (I|0\\rangle) \\otimes (X|0\\rangle) $$\n\n$$  = |0\\rangle \\otimes |1\\rangle $$\n\n$$  = |01\\rangle $$\n\n**Input $|01\\rangle$:**\n\n$$ U|01\\rangle = (I|0\\rangle) \\otimes (X|1\\rangle) $$\n\n$$  = |0\\rangle \\otimes |0\\rangle $$\n\n$$  = |00\\rangle $$\n\n**Input $|10\\rangle$:**\n\n$$ U|10\\rangle = (I|1\\rangle) \\otimes (X|0\\rangle) $$\n\n$$  = |1\\rangle \\otimes |1\\rangle $$\n\n$$  = |11\\rangle $$\n\n**Input $|11\\rangle$:**\n\n$$ U|11\\rangle = (I|1\\rangle) \\otimes (X|1\\rangle) $$\n\n$$  = |1\\rangle \\otimes |0\\rangle $$\n\n$$  = |10\\rangle $$\n\n### Probability Measurements\n\nThe initialized input is $|00\\rangle=(1,0,0,0)^T$. Keep all four row products visible:\n\n$$ U|00\\rangle = \\begin{bmatrix}0 & 1 & 0 & 0\\\\1 & 0 & 0 & 0\\\\0 & 0 & 0 & 1\\\\0 & 0 & 1 & 0\\end{bmatrix}\\begin{bmatrix}1\\\\0\\\\0\\\\0\\end{bmatrix}. $$\n\n**Row 1:** $ 0\\cdot1 + 1\\cdot0 + 0\\cdot0 + 0\\cdot0 = 0 $.\n\n**Row 2:** $ 1\\cdot1 + 0\\cdot0 + 0\\cdot0 + 0\\cdot0 = 1 $.\n\n**Row 3:** $ 0\\cdot1 + 0\\cdot0 + 0\\cdot0 + 1\\cdot0 = 0 $.\n\n**Row 4:** $ 0\\cdot1 + 0\\cdot0 + 1\\cdot0 + 0\\cdot0 = 0 $.\n\n$$ |\\psi_f\\rangle = \\begin{bmatrix}0\\\\1\\\\0\\\\0\\end{bmatrix} = |01\\rangle. $$\n\n**Probability measurements and normalization:**\n\nTake the squared magnitude of each output amplitude, rather than the amplitude itself:\n\n$P(00) = |0|^2 = 0\\cdot0 = 0$.\n\n$P(01) = |1|^2 = (1)(1) = 1$.\n\n$P(10) = |0|^2 = 0\\cdot0 = 0$.\n\n$P(11) = |0|^2 = 0\\cdot0 = 0$.\n\n$$ 0 + 1 + 0 + 0 = 1. $$\n\nFor the other basis inputs above, there is exactly one nonzero coefficient, of magnitude 1. Its output ket has probability 1 and the other three outcomes have probability 0.",
+  "word_before_q1b": "5eed46155d2a6e43427bba1cfe6b67707a0c3ddd282d3efac379677577419741",
+  "word_from_q1c": "f3874758083263ac095ae5aa8c3f3e099115a22ea30d71a91fe9f2ddbe7d28cd",
+  "pdf_before_q1b": "32197980d6be3efbc8919d2eb21c0f1e6ff11d7e3339e45b656fc4f244f60ee7",
+  "pdf_from_q1c": "a398d47e016438aa15e8045e370ebf93700cafdebddfd679fdf27361dabc0041"
+}

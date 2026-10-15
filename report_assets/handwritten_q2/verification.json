@@ -1,0 +1,49 @@
+{
+  "changed_notebook_cells": [
+    27
+  ],
+  "all_other_cells_and_outputs_unchanged": true,
+  "pdf_pages": 30,
+  "q1a_handwritten_pages": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "q1b_handwritten_pages": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "q1c_handwritten_pages": [
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "q2_handwritten_pages": [
+    26,
+    27
+  ],
+  "word_images_match_notebook_export": true,
+  "pdf_handwritten_bytes_and_figure_pixels_match_notebook_export": true,
+  "word_content_outside_q2_unchanged": true,
+  "pdf_text_outside_q2_unchanged": true,
+  "q2_intermediate_state_cnot_output_and_probabilities_match_qiskit": true,
+  "figures": 5,
+  "handwritten_pages": 15,
+  "tables": 4,
+  "assignment_headings": 24,
+  "native_editable_equations": 68,
+  "executed_code_cells": 10,
+  "source_pdf_and_original_scan_images_unchanged": true,
+  "notebook_sha256": "b5a0f203d8dd8d80c5f62b9c8140147bab614dfcd725fb298fc3064d7ac06481",
+  "current_word_report": "report_assets\\runtime\\pending_reports\\Assignment3.docx",
+  "root_word_replacement_blocked_by_lock": true,
+  "q2_pdf_pages_visually_inspected": [
+    26,
+    27
+  ]
+}

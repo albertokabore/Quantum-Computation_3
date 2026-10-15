@@ -1,20 +1,49 @@
-# Quantum-Computation_3
-Assignment 3: two-qubit operators, measurement predictions, and Qiskit verification.
+# Assignment 3
 
-[Assignment3.pdf](Assignment3.pdf) is the single PDF for submission. Fill in the name before uploading to Canvas.
-[REVIEW.md](REVIEW.md) documents the requirement-by-requirement review and corrections.
+The supplied assignment instructions are saved in
+[Assignment3_Instructions.md](Assignment3_Instructions.md).
 
-The review confirmed all four Question 1 answers and corrected Question 2's connected
-control dot and X to `cx(0, 1)`. Its output is the Bell state `( |00> + |11> ) / sqrt(2)`.
-The PDF and executed notebook include expanded derivations, ideal simulator histograms,
-and a two-paragraph IBM hardware explanation with linked references.
+Current reports:
 
-```bash
-pip install -r requirements.txt
-python -m pytest -q        # checks the hand-derived operators/states against Qiskit
-python make_report.py      # simulates, saves figures/, writes Assignment3.pdf
+- [Assignment3.pdf](Assignment3.pdf)
+- [Assignment3.docx](report_assets/runtime/pending_reports/Assignment3.docx)
+
+Both reports include the actual handwritten pages from the user's PDFs:
+
+- Question 1(a): PDF pages **3-6**.
+- Question 1(b): PDF pages **9-12**.
+- Question 1(c): PDF pages **15-19**, including all six handwritten steps.
+- Question 2: PDF pages **26-27**, including all three handwritten steps.
+
+The verification code, results tables, and histograms are retained. The missing
+upper-right block in Question 1(a) is also retained. Questions 1 and 3 are
+unchanged by the Question 2 update. The PDF has 30 pages. The
+Word report contains the same 15 handwritten pages and 68 native editable
+equations for the retained typed work. A short sign clarification follows
+Question 1(c)'s second scan; the handwriting itself is unchanged.
+Question 1(b)'s existing print-image optimization is retained. Question 1(c)'s
+and Question 2's full-resolution scan images are embedded without resizing or
+recompression.
+
+The root `Assignment3.docx` remains an older version because Windows prevents
+replacement while it is open. Use the updated Word copy linked above.
+
+The reviewed source is [Assignment3.ipynb](Assignment3.ipynb). The original
+scan images are stored in `report_assets/handwritten_q1a/`,
+`report_assets/handwritten_q1b/`, `report_assets/handwritten_q1c/`, and
+`report_assets/handwritten_q2/`, with
+source checksums in their `source.json` files. [results.json](results.json) records actual ideal AerSimulator
+results, using 1024 shots and seed 2026; they are not IBM hardware measurements.
+
+Use the project's Python 3.11 `.venv` interpreter. To execute and rebuild:
+
+```powershell
+.\.venv\Scripts\python.exe execute_notebook.py
+.\.venv\Scripts\python.exe make_report.py
 ```
 
-Open `Assignment3.ipynb` in the IDE's notebook viewer to inspect or rerun the executed
-notebook. The PDF build regenerates `results.json` and all circuit/histogram images
-using 1024 shots and seed 2026. It does not execute the notebook.
+`make_report.py` exports the notebook's typed content and local scan images to
+PDF and Word. If the root Word file is locked, it retains the updated copy in
+`report_assets/runtime/pending_reports/Assignment3.docx`.
+
+[REVIEW.md](REVIEW.md) records the current preservation and export checks.

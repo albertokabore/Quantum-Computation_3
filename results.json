@@ -1,17 +1,20 @@
 {
   "shots": 1024,
   "seed": 2026,
+  "backend": "ideal AerSimulator",
+  "provenance": {
+    "data_origin": "executed Assignment3.ipynb",
+    "python_executable": "C:\\Users\\alber\\Quantum-Computation_3\\.venv\\Scripts\\python.exe",
+    "noise_model": null,
+    "versions": {
+      "python": "3.11.0",
+      "qiskit": "2.5.2",
+      "qiskit_aer": "0.17.2"
+    },
+    "notebook_sha256": "b5a0f203d8dd8d80c5f62b9c8140147bab614dfcd725fb298fc3064d7ac06481"
+  },
   "q1": {
     "a": {
-      "code": [
-        "qc = QuantumCircuit(2)",
-        "qc.x(0)",
-        "qc.x(1)"
-      ],
-      "kron": [
-        "X",
-        "X"
-      ],
       "matrix": [
         [
           [
@@ -97,21 +100,9 @@
         "01": 0,
         "10": 0,
         "11": 1024
-      },
-      "figures": {
-        "circuit": "figures\\q1a_circuit.png",
-        "histogram": "figures\\q1a_histogram.png"
       }
     },
     "b": {
-      "code": [
-        "qc = QuantumCircuit(2)",
-        "qc.x(0)"
-      ],
-      "kron": [
-        "I",
-        "X"
-      ],
       "matrix": [
         [
           [
@@ -197,22 +188,9 @@
         "01": 1024,
         "10": 0,
         "11": 0
-      },
-      "figures": {
-        "circuit": "figures\\q1b_circuit.png",
-        "histogram": "figures\\q1b_histogram.png"
       }
     },
     "c": {
-      "code": [
-        "qc = QuantumCircuit(2)",
-        "qc.h(0)",
-        "qc.h(1)"
-      ],
-      "kron": [
-        "H",
-        "H"
-      ],
       "matrix": [
         [
           [
@@ -283,7 +261,7 @@
           ],
           [
             0.4999999999999999,
-            -0.0
+            0.0
           ]
         ]
       ],
@@ -298,22 +276,9 @@
         "01": 275,
         "10": 252,
         "11": 233
-      },
-      "figures": {
-        "circuit": "figures\\q1c_circuit.png",
-        "histogram": "figures\\q1c_histogram.png"
       }
     },
     "d": {
-      "code": [
-        "qc = QuantumCircuit(2)",
-        "qc.z(0)",
-        "qc.y(1)"
-      ],
-      "kron": [
-        "Y",
-        "Z"
-      ],
       "matrix": [
         [
           [
@@ -399,10 +364,6 @@
         "01": 0,
         "10": 1024,
         "11": 0
-      },
-      "figures": {
-        "circuit": "figures\\q1d_circuit.png",
-        "histogram": "figures\\q1d_histogram.png"
       }
     }
   },
@@ -424,22 +385,6 @@
         0.7071067811865475,
         0.0
       ]
-    ],
-    "probabilities": {
-      "00": 0.4999999999999999,
-      "01": 0.0,
-      "10": 0.0,
-      "11": 0.4999999999999999
-    },
-    "counts": {
-      "00": 516,
-      "01": 0,
-      "10": 0,
-      "11": 508
-    },
-    "figures": {
-      "circuit": "figures\\q2_circuit.png",
-      "histogram": "figures\\q2_histogram.png"
-    }
+    ]
   }
 }

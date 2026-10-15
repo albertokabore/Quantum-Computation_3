@@ -1,0 +1,37 @@
+{
+  "source_pdf": "C:\\Users\\alber\\OneDrive\\Documents\\Question_1(a).pdf",
+  "source_pdf_sha256": "e7fdb01cfdafc5ba74a3b01d35ef6c8189ef3f2d287fecd60dc5e39da939ff26",
+  "pages": [
+    {
+      "source_page": 1,
+      "path": "report_assets\\handwritten_q1a\\page_1.jpeg",
+      "width": 3060,
+      "height": 3752,
+      "sha256": "9fe661e0a98e81caa42b358d129a933c5fa1797dc0b2cf2905a78bca1c553acc"
+    },
+    {
+      "source_page": 2,
+      "path": "report_assets\\handwritten_q1a\\page_2.jpeg",
+      "width": 3144,
+      "height": 3892,
+      "sha256": "6ab41cd0e23d9e8a390c9b4762fdfe60c7e1c077da2deaabba340eeea5b08d4d"
+    },
+    {
+      "source_page": 3,
+      "path": "report_assets\\handwritten_q1a\\page_3.jpeg",
+      "width": 2380,
+      "height": 3028,
+      "sha256": "e5fc73c581fc5cbacd17dcdf5a5fca9b2b6565f4a2595b9fe7c3464700e5a8a7"
+    },
+    {
+      "source_page": 4,
+      "path": "report_assets\\handwritten_q1a\\page_4.jpeg",
+      "width": 2780,
+      "height": 3520,
+      "sha256": "be9209b075e59ee779dca856731027a2da8f19bacbd8d5172c0b580a47a7bf31"
+    }
+  ],
+  "word_after_q1a_sha256": "7255b8a1dc3ca694e5694bcaaecd9f2aeba7870ed6cc780a7ca5ffc5b11c03ed",
+  "pdf_after_q1a_sha256": "32925f64dfc13f531b665e5b609a9cfb1bd27ca597f12e47420402f9a2ead7a6",
+  "word_after_q1a_normalized_sha256": "8a7e6b6d74fed9885d580cfed3124bbec5a23320b1f7f36aca394f9c2b48f8e0"
+}
