@@ -57,6 +57,7 @@ class Block:
     value: object
     cell: int
     label: str = ""
+    source_path: Path | None = None
 
 
 @lru_cache(maxsize=None)
@@ -116,7 +117,8 @@ def content(notebook: dict) -> tuple[list[Block], list[str]]:
                                      quality=int(image_options["jpeg_quality"]))
                         data = buffer.getvalue()
                 blocks.append(Block("page_image" if page_images else "image",
-                                    data, cell, picture.get("alt", "")))
+                                    data, cell, picture.get("alt", ""),
+                                    None if image_options else path))
                 continue
             blocks.append(Block("html", element, cell))
 
@@ -401,7 +403,16 @@ def write_pdf(blocks, equations, path):
             story.append(Preformatted(block.value.rstrip(), output, maxLineLength=88, newLineChars="    "))
         elif block.kind in {"image", "page_image"}:
             width, height = image_size(block.value, block.kind == "page_image")
-            image = Image(BytesIO(block.value), width=width, height=height, hAlign="CENTER")
+            # ReportLab embeds JPEG filenames directly without decoding their
+            # full pixel arrays. Keep the original bytes and avoid retaining
+            # hundreds of megabytes of decoded handwritten pages in memory.
+            if block.source_path and block.source_path.suffix.lower() in {".jpg", ".jpeg"}:
+                if block.source_path.read_bytes() != block.value:
+                    raise RuntimeError(f"Source image changed during export: {block.source_path}")
+                picture_source = str(block.source_path)
+            else:
+                picture_source = BytesIO(block.value)
+            image = Image(picture_source, width=width, height=height, hAlign="CENTER")
             image.spaceAfter = 8
             image.keepWithNext = followed_by_histogram_comment(blocks, block_index)
             story.append(image)

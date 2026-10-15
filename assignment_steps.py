@@ -413,3 +413,18 @@ def q2_markdown() -> str:
 ![Question 2, handwritten page 2](report_assets/handwritten_q2/page_2.jpeg)
 
 ---"""
+
+
+def q2_verification_markdown() -> str:
+    """Explain why the calculated Bell output is entangled before checking it."""
+    return r"""The Bell state above is entangled: it cannot be written as two independent single-qubit states. To see why, expand a possible product:
+
+$$ (a|0\rangle+b|1\rangle)\otimes(c|0\rangle+d|1\rangle) $$
+
+$$ =ac|00\rangle+ad|01\rangle+bc|10\rangle+bd|11\rangle. $$
+
+Matching the Bell state would require both ac and bd to equal 1/√2, so a, b, c, and d must all be nonzero. Then ad and bc would also be nonzero, contradicting the zero coefficients of |01⟩ and |10⟩. Therefore the output cannot be factored into separate qubit states.
+
+The two qubits give matching measurement outcomes, 00 or 11, each with probability 1/2. A classical mixture of these two outcomes gives the same computational-basis probabilities. The ideal statevector calculation establishes the coherent Bell state produced before measurement.
+
+Verify the state before measurement and display the circuit with the measurement gates shown in the assignment."""

@@ -56,7 +56,11 @@ def histogram_comment(key, result, shots):
     if key == "c":
         explanation = (f"The prediction is probability 1/4 for every outcome, or {shots / 4:g} "
                        "counts per outcome on average. The observed bars are approximately equal; "
-                       "their small differences arise from finite-shot sampling in the ideal simulator.")
+                       "their small differences arise from finite-shot sampling in the ideal simulator. "
+                       rf"For one outcome, the count standard deviation is $\sigma=\sqrt{{Np(1-p)}}"
+                       rf"=\sqrt{{{shots}(1/4)(3/4)}}\approx{(shots * .25 * .75) ** .5:.1f}$ counts. "
+                       "This gives the typical scale of variation across repeated runs; differences "
+                       "larger than one standard deviation can occur.")
     else:
         bits = {"a": "11", "b": "01", "d": "10"}[key]
         explanation = (f"All {shots} shots give {bits}, matching P({bits}) = 1 and probability 0 "
