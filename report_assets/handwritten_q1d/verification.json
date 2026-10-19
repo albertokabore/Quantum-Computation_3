@@ -1,0 +1,35 @@
+{
+  "only_changed_notebook_cell": 21,
+  "unchanged_other_cells": 32,
+  "original_full_resolution_scan_pages": 4,
+  "scan_order_and_bytes_verified_in_both_reports": true,
+  "word_content_outside_replaced_answer_preserved": true,
+  "pdf_pages_1_to_21_pixel_identical": true,
+  "pdf_questions_2_3_and_references_pixel_identical_except_page_numbers": true,
+  "q1d_code_results_and_histogram_preserved": true,
+  "all_numerical_results_preserved": true,
+  "pdf_pages": 32,
+  "q1d_scan_pdf_pages": [
+    22,
+    23,
+    24,
+    25
+  ],
+  "q2_scan_pdf_pages": [
+    28,
+    29
+  ],
+  "word_archive_integrity": "passed",
+  "retained_native_word_equations": 13,
+  "tables": 4,
+  "figures": 5,
+  "total_handwritten_scan_pages": 19,
+  "no_images_outside_pdf_margins": true,
+  "visual_review": "PDF pages 22 through 27 reviewed; all four scans and retained verification content are complete and readable.",
+  "published_files": {
+    "Assignment3.ipynb": "C:\\Users\\alber\\Quantum-Computation_3\\Assignment3.ipynb",
+    "results.json": "C:\\Users\\alber\\Quantum-Computation_3\\results.json",
+    "Assignment3.pdf": "C:\\Users\\alber\\Quantum-Computation_3\\Assignment3.pdf",
+    "Assignment3.docx": "C:\\Users\\alber\\Quantum-Computation_3\\Assignment3.docx"
+  }
+}

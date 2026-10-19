@@ -48,9 +48,8 @@ INTRO = [
 ]
 
 OPERATOR_STEPS = {
-    "a": ["The first gate is X on q0: I ⊗ X.\n\n"
-          "The second gate is X on q1: X ⊗ I.\n\n"
-          r"$$ U=(X\otimes I)(I\otimes X)=(XI)\otimes(IX)=X\otimes X. $$",
+    "a": ["The first gate is X on q0: I ⊗ X. The second is X on q1: X ⊗ I. "
+          "Thus U = (X ⊗ I)(I ⊗ X) = (XI) ⊗ (IX) = X ⊗ X.",
           "The entries of the left X are 0,1,1,0. They scale the four blocks in that order."],
     "b": ["Only q0 receives X; q1 receives I. Thus U = I ⊗ X.",
           "The entries of I are 1,0,0,1. They scale the four blocks in that order."],
@@ -225,108 +224,7 @@ def probability_markdown(vector: np.ndarray) -> str:
     return "\n\n".join(f"$P({bits}) = {tex(work)}$." for bits, _, work, _ in probability_steps(vector))
 
 
-def q1a_handwritten_markdown() -> str:
-    """Use the actual scanned answers and retain the block omitted by the user."""
-    return r"""## Question 1(a)
-
-### 4×4 Operator Using the Kronecker Product Formulation
-
-![Question 1(a), handwritten page 1](report_assets/handwritten_q1a/page_1.jpeg)
-
----
-
-![Question 1(a), handwritten page 2](report_assets/handwritten_q1a/page_2.jpeg)
-
-**Upper-right block:**
-
-$$ (1)X = \begin{bmatrix}(1)\cdot(0) & (1)\cdot(1)\\(1)\cdot(1) & (1)\cdot(0)\end{bmatrix} $$
-
-$$ = \begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}. $$
-
----
-
-### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩
-
-![Question 1(a), handwritten page 3](report_assets/handwritten_q1a/page_3.jpeg)
-
----
-
-### Probability Measurements
-
-![Question 1(a), handwritten page 4](report_assets/handwritten_q1a/page_4.jpeg)
-
----"""
-
-
-def q1b_handwritten_markdown() -> str:
-    """Use the four actual handwritten Question 1(b) page images."""
-    return r"""## Question 1(b)
-
-### 4×4 Operator Using the Kronecker Product Formulation
-
-![Question 1(b), handwritten page 1](report_assets/handwritten_q1b/page_1.jpeg)
-
----
-
-![Question 1(b), handwritten page 2](report_assets/handwritten_q1b/page_2.jpeg)
-
----
-
-### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩
-
-![Question 1(b), handwritten page 3](report_assets/handwritten_q1b/page_3.jpeg)
-
----
-
-### Probability Measurements
-
-![Question 1(b), handwritten page 4](report_assets/handwritten_q1b/page_4.jpeg)
-
----"""
-
-
-def q1c_handwritten_markdown() -> str:
-    """Keep all five handwritten pages and all six steps for Question 1(c)."""
-    return r"""## Question 1(c)
-
-### 4×4 Operator Using the Kronecker Product Formulation
-
-![Question 1(c), handwritten page 1](report_assets/handwritten_q1c/page_1.jpeg)
-
----
-
-![Question 1(c), handwritten page 2](report_assets/handwritten_q1c/page_2.jpeg)
-
-For clarity, the bottom-right entry of the lower-right block uses two negative factors:
-
-$$ \left(-\frac{1}{\sqrt{2}}\right)\left(-\frac{1}{\sqrt{2}}\right)=\frac{1}{2}. $$
-
----
-
-### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩
-
-![Question 1(c), handwritten page 3](report_assets/handwritten_q1c/page_3.jpeg)
-
----
-
-![Question 1(c), handwritten page 4](report_assets/handwritten_q1c/page_4.jpeg)
-
----
-
-### Probability Measurements
-
-![Question 1(c), handwritten page 5](report_assets/handwritten_q1c/page_5.jpeg)
-
----"""
-
-
 def q1_markdown(part: hw.Part) -> str:
-    if part.key == "a":
-        return q1a_handwritten_markdown()
-    if part.key == "b":
-        return q1b_handwritten_markdown()
-    if part.key == "c":
-        return q1c_handwritten_markdown()
     g1, g0 = part.kron
     output = part.expected[:, 0]
     chunks = [f"## Question 1({part.key})",
@@ -335,14 +233,8 @@ def q1_markdown(part: hw.Part) -> str:
                                                for name in dict.fromkeys(part.kron)) + ". $$",
               "**Single-qubit actions:**",
               "Multiply the two matrix rows by the input column. These are the only single-qubit actions needed for this part."]
-    for action_index, (label, work, ket) in enumerate(gate_actions(part.kron)):
+    for label, work, ket in gate_actions(part.kron):
         chunks.append(f"**Input ${tex(label)}$:**")
-        if part.key == "a":
-            # The user's handwritten page 1 explicitly multiplies X by each
-            # input column before calculating the two row products.
-            input_column = np.eye(2)[:, action_index:action_index + 1]
-            chunks.append(f"$$ {tex(label)} = {matrix_tex(hw.X)}"
-                          f"{matrix_tex(input_column)}. $$")
         chunks.extend(f"$$ {tex(row)} $$" for row in work.split("; "))
         chunks.append(f"Therefore $ {tex(label + ' = ' + ket)} $.")
     chunks += ["**Kronecker product expansion:**",
@@ -353,22 +245,8 @@ def q1_markdown(part: hw.Part) -> str:
         products = (r"\begin{bmatrix}" + r"\\".join(
             " & ".join(tex(f"({scalar(coefficient)})×({scalar(value)})") for value in row)
             for row in right) + r"\end{bmatrix}")
-        if part.key == "a" and index in {0, 2, 3}:
-            # Transcribe the three blocks present on handwritten page 2.
-            # The omitted upper-right block retains its existing calculation.
-            expansion = f"{tex(block)} = "
-            if index in {0, 2}:
-                expansion += f"({tex(scalar(coefficient))}){matrix_tex(right)} = "
-            expansion += products
-            result = matrix_tex(coefficient * right)
-            chunks.append(f"**{position} block:**")
-            if index == 0:
-                chunks += [f"$$ {expansion} $$", f"$$ {tex(block)} = {result}. $$"]
-            else:
-                chunks.append(f"$$ {expansion} = {result}. $$")
-        else:
-            chunks += [f"**{position} block:**", f"$$ {tex(block)} = {products} $$",
-                       f"$$ = {matrix_tex(coefficient * right)}. $$"]
+        chunks += [f"**{position} block:**", f"$$ {tex(block)} = {products} $$",
+                   f"$$ = {matrix_tex(coefficient * right)}. $$"]
     chunks += ["Place the upper two blocks side by side, then the lower two blocks:",
                f"$$ U = {g1} \\otimes {g0} = {matrix_tex(part.expected)}. $$",
                "### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩",
@@ -403,16 +281,32 @@ CNOT_ROWS = [["00", "0: leave q1 = 0", "00"], ["01", "1: flip q1 from 0 to 1", "
 
 
 def q2_markdown() -> str:
-    """Use both handwritten Question 2 pages, including all three steps."""
+    """Return the original typed Question 2 solution."""
     return r"""## Question 2: Output State Vector
 
-![Question 2, handwritten page 1](report_assets/handwritten_q2/page_1.jpeg)
+The input is |00⟩. The diagram applies H to q0, followed by a controlled-X with q0 as control and q1 as target. The connected control and X therefore mean `qc.cx(0, 1)`. Barriers do not change the state.
 
----
+The operator is I ⊗ H because q1 is unchanged:
 
-![Question 2, handwritten page 2](report_assets/handwritten_q2/page_2.jpeg)
+$$ (I\otimes H)|00\rangle=|0\rangle\otimes\frac{|0\rangle+|1\rangle}{\sqrt2}=\frac{|00\rangle+|01\rangle}{\sqrt2}. $$
 
----"""
+In the ordered basis 00,01,10,11, this is
+
+$$ |\psi_1\rangle=\frac1{\sqrt2}\begin{bmatrix}1\\1\\0\\0\end{bmatrix}. $$
+
+CNOT leaves a branch unchanged when its rightmost bit q0 is 0 and flips q1 when q0 is 1. Thus C|00⟩ = |00⟩ and C|01⟩ = |11⟩. Its matrix is
+
+$$ C=\begin{bmatrix}1&0&0&0\\0&0&0&1\\0&0&1&0\\0&1&0&0\end{bmatrix}. $$
+
+Apply it to the state after H:
+
+$$ C|\psi_1\rangle=\frac{C|00\rangle+C|01\rangle}{\sqrt2}=\frac{|00\rangle+|11\rangle}{\sqrt2}. $$
+
+**Output state vector:**
+
+$$ \boxed{|\psi_{out}\rangle=\frac1{\sqrt2}\begin{bmatrix}1\\0\\0\\1\end{bmatrix}=\frac{|00\rangle+|11\rangle}{\sqrt2}}. $$
+
+This normalized Bell state is the coherent output immediately before the measurement gates: (1/√2)² + (1/√2)² = 1. The final measurements give the conditional state |00⟩ or |11⟩, each with probability 1/2. There is no single pure output vector for an unrecorded measurement outcome."""
 
 
 def q2_verification_markdown() -> str:

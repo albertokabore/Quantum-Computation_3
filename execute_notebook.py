@@ -110,6 +110,8 @@ def execute():
             continue
         if section == "verification_q2":
             filename = "q2_circuit.png"
+        elif section.startswith("verification_q1"):
+            filename = section.removeprefix("verification_") + "_circuit.png"
         elif section.startswith("histogram_plot_"):
             filename = section.removeprefix("histogram_plot_") + "_histogram.png"
         else:

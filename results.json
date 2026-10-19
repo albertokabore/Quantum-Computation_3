@@ -11,7 +11,7 @@
       "qiskit": "2.5.2",
       "qiskit_aer": "0.17.2"
     },
-    "notebook_sha256": "55fecec754db5d8c022dbcbecfa8da77294f8754993655244511032de5ab62f2"
+    "notebook_sha256": "9cc5a07d2444679d688ecbe04facafe75f441ed914eb26d2895fc3b29dfb3c84"
   },
   "q1": {
     "a": {

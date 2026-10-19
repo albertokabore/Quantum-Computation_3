@@ -226,3 +226,6 @@ report_assets/runtime/
 
 # Microsoft Word owner files
 ~$*.docx
+
+# Superseded Word report; keep Assignment3_Revised.docx as the final copy.
+/Assignment3.docx

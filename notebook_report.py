@@ -1,7 +1,8 @@
-"""Export the saved notebook, without changing or executing it, to PDF and DOCX.
+"""Export the saved notebook and report-only answers to PDF and DOCX.
 
 Both writers consume the same ordered content, including code and rich outputs.
 The PDF uses vector equations; DOCX uses editable Office Math equations.
+Handwritten replacements apply only to an in-memory report copy of the notebook.
 """
 
 from __future__ import annotations
@@ -40,6 +41,7 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parent
 NOTEBOOK = ROOT / "Assignment3.ipynb"
+REPORT_ANSWERS = ROOT / "report_assets" / "report_answers.json"
 TITLE = "Assignment 3"
 AUTHOR = "Albert Kabore"
 WIDTH = 6 * inch
@@ -58,6 +60,46 @@ class Block:
     cell: int
     label: str = ""
     source_path: Path | None = None
+
+
+def report_notebook(notebook: dict) -> dict:
+    """Apply report answers and section choices without changing the notebook."""
+    document = deepcopy(notebook)
+    if not REPORT_ANSWERS.is_file():
+        return document
+    replacements = json.loads(REPORT_ANSWERS.read_bytes())
+    if replacements.get("version") != 1:
+        raise ValueError("Unsupported report answer configuration version")
+    cells = {cell["id"]: cell for cell in document["cells"]}
+    for answer in replacements["answers"]:
+        cell = cells.get(answer["cell_id"])
+        heading = "## " + answer["question"]
+        if (cell is None or cell["cell_type"] != "markdown"
+                or source(cell["source"]).splitlines()[0] != heading
+                or source(answer["source"]).splitlines()[0] != heading):
+            raise ValueError(f"Report answer does not match its notebook question: {heading}")
+        if set(answer["metadata"]) - {"report_page_images", "report_image_options"}:
+            raise ValueError(f"Unexpected report answer metadata: {heading}")
+        cell["source"] = deepcopy(answer["source"])
+        cell.setdefault("metadata", {}).update(deepcopy(answer["metadata"]))
+    notebook_only = set(replacements.get("notebook_only_headings", []))
+    if notebook_only:
+        report_cells = []
+        for cell in document["cells"]:
+            if cell["cell_type"] == "markdown":
+                lines, skip = [], False
+                for line in source(cell["source"]).splitlines(keepends=True):
+                    heading = re.match(r"^#{1,6}\s+(.+?)\s*$", line)
+                    if heading:
+                        skip = heading.group(1) in notebook_only
+                    if not skip:
+                        lines.append(line)
+                if not "".join(lines).strip():
+                    continue
+                cell["source"] = lines
+            report_cells.append(cell)
+        document["cells"] = report_cells
+    return document
 
 
 @lru_cache(maxsize=None)
@@ -669,9 +711,10 @@ def write_word(blocks, equations, path):
 def build() -> tuple[Path, Path]:
     original = NOTEBOOK.read_bytes()
     notebook = json.loads(original)
-    blocks, equations = content(notebook)
+    blocks, equations = content(report_notebook(notebook))
     register_fonts()
-    pdf_path, word_path = ROOT / "Assignment3.pdf", ROOT / "Assignment3.docx"
+    pdf_path = ROOT / "Assignment3.pdf"
+    word_path = ROOT / "Assignment3_Revised.docx"
     (ROOT / "report_assets").mkdir(exist_ok=True)
     # Stage both files before replacing either final report.
     import tempfile
@@ -681,17 +724,13 @@ def build() -> tuple[Path, Path]:
         write_pdf(blocks, equations, temporary / pdf_path.name)
         if NOTEBOOK.read_bytes() != original:
             raise RuntimeError("The source notebook changed during the export")
-        (temporary / pdf_path.name).replace(pdf_path)
         try:
             (temporary / word_path.name).replace(word_path)
-        except PermissionError:
-            pending = ROOT / "report_assets" / "runtime" / "pending_reports"
-            pending.mkdir(parents=True, exist_ok=True)
-            pending_word = pending / word_path.name
-            (temporary / word_path.name).replace(pending_word)
-            print(f"Could not replace {word_path.name}; it may be open in Word. "
-                  f"The corrected Word report is saved at {pending_word}.")
-            word_path = pending_word
+        except PermissionError as error:
+            raise PermissionError(
+                f"Close {word_path.name} in Word before rebuilding the reports."
+            ) from error
+        (temporary / pdf_path.name).replace(pdf_path)
     print(f"Reproduced {len(notebook['cells'])} notebook cells, {len(equations)} equations, "
           f"{sum(b.kind == 'image' for b in blocks)} figures, "
           f"{sum(b.kind == 'page_image' for b in blocks)} handwritten pages, and "

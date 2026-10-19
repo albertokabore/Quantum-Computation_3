@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "answers": [
+    {
+      "cell_id": "4cdeebba",
+      "question": "Question 1(a)",
+      "source": [
+        "## Question 1(a)\n",
+        "\n",
+        "### 4×4 Operator Using the Kronecker Product Formulation\n",
+        "\n",
+        "![Question 1(a), handwritten page 1, Steps 1 and 2](report_assets/handwritten_q1a_steps/page_1.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 1(a), handwritten page 2, Steps 3 and 4](report_assets/handwritten_q1a_steps/page_2.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 1(a), handwritten page 3, Steps 4, 5 and 6](report_assets/handwritten_q1a_steps/page_3.jpeg)\n",
+        "\n",
+        "For clarity, the Step 4 result for input |10⟩ is the two-qubit ket |01⟩:\n",
+        "\n",
+        "$$ U|10\\rangle=|0\\rangle\\otimes|1\\rangle=|01\\rangle. $$\n",
+        "\n",
+        "---"
+      ],
+      "metadata": {
+        "report_page_images": true
+      }
+    },
+    {
+      "cell_id": "5e94285b",
+      "question": "Question 1(b)",
+      "source": [
+        "## Question 1(b)\n",
+        "\n",
+        "### 4×4 Operator Using the Kronecker Product Formulation\n",
+        "\n",
+        "![Question 1(b), handwritten page 1](report_assets/handwritten_q1b/page_1.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 1(b), handwritten page 2](report_assets/handwritten_q1b/page_2.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩\n",
+        "\n",
+        "![Question 1(b), handwritten page 3](report_assets/handwritten_q1b/page_3.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### Probability Measurements\n",
+        "\n",
+        "![Question 1(b), handwritten page 4](report_assets/handwritten_q1b/page_4.jpeg)\n",
+        "\n",
+        "---"
+      ],
+      "metadata": {
+        "report_image_options": {
+          "grayscale": true,
+          "jpeg_quality": 45,
+          "max_width": 900
+        },
+        "report_page_images": true
+      }
+    },
+    {
+      "cell_id": "68adc532",
+      "question": "Question 1(c)",
+      "source": [
+        "## Question 1(c)\n",
+        "\n",
+        "### 4×4 Operator Using the Kronecker Product Formulation\n",
+        "\n",
+        "![Question 1(c), handwritten page 1](report_assets/handwritten_q1c/page_1.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 1(c), handwritten page 2](report_assets/handwritten_q1c/page_2.jpeg)\n",
+        "\n",
+        "For clarity, the bottom-right entry of the lower-right block uses two negative factors:\n",
+        "\n",
+        "$$ \\left(-\\frac{1}{\\sqrt{2}}\\right)\\left(-\\frac{1}{\\sqrt{2}}\\right)=\\frac{1}{2}. $$\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩\n",
+        "\n",
+        "![Question 1(c), handwritten page 3](report_assets/handwritten_q1c/page_3.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 1(c), handwritten page 4](report_assets/handwritten_q1c/page_4.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### Probability Measurements\n",
+        "\n",
+        "![Question 1(c), handwritten page 5](report_assets/handwritten_q1c/page_5.jpeg)\n",
+        "\n",
+        "---"
+      ],
+      "metadata": {
+        "report_page_images": true
+      }
+    },
+    {
+      "cell_id": "a069fc42",
+      "question": "Question 1(d)",
+      "source": [
+        "## Question 1(d)\n",
+        "\n",
+        "### 4×4 Operator Using the Kronecker Product Formulation\n",
+        "\n",
+        "![Question 1(d), handwritten page 1](report_assets/handwritten_q1d/page_1.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 1(d), handwritten page 2](report_assets/handwritten_q1d/page_2.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### Action of the Operator on the Kets: |00⟩, |01⟩, |10⟩, |11⟩\n",
+        "\n",
+        "![Question 1(d), handwritten page 3](report_assets/handwritten_q1d/page_3.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### Probability Measurements\n",
+        "\n",
+        "![Question 1(d), handwritten page 4](report_assets/handwritten_q1d/page_4.jpeg)\n",
+        "\n",
+        "---"
+      ],
+      "metadata": {
+        "report_page_images": true
+      }
+    },
+    {
+      "cell_id": "3166dc3f",
+      "question": "Question 2: Output State Vector",
+      "source": [
+        "## Question 2: Output State Vector\n",
+        "\n",
+        "![Question 2, handwritten page 1](report_assets/handwritten_q2/page_1.jpeg)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "![Question 2, handwritten page 2](report_assets/handwritten_q2/page_2.jpeg)\n",
+        "\n",
+        "---"
+      ],
+      "metadata": {
+        "report_page_images": true
+      }
+    }
+  ],
+  "notebook_only_headings": [
+    "Introduction",
+    "Conclusion"
+  ]
+}

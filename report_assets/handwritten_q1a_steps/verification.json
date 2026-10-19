@@ -1,0 +1,46 @@
+{
+  "question_replaced": "Question 1(a)",
+  "only_changed_notebook_cell": 3,
+  "all_other_32_cells_unchanged": true,
+  "question_1d_update_preserved": true,
+  "source_scan_pages": 3,
+  "source_steps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "exact_scan_bytes_and_order_verified_in_both_reports": true,
+  "word_content_outside_answer_unchanged": true,
+  "all_pdf_pages_outside_answer_pixel_identical_except_page_numbers": true,
+  "all_code_outputs_results_tables_and_histograms_preserved": true,
+  "redundant_typed_upper_right_block_removed_because_in_scan": true,
+  "pdf_pages": 31,
+  "q1a_scan_pdf_pages": [
+    3,
+    4,
+    5
+  ],
+  "q1d_scan_pdf_pages": [
+    21,
+    22,
+    23,
+    24
+  ],
+  "handwritten_scans": 18,
+  "figures": 5,
+  "tables": 4,
+  "native_editable_equations": 11,
+  "word_archive_integrity": "passed",
+  "pdf_images_within_margins": true,
+  "source_pdf_unchanged": true,
+  "visual_review": "PDF pages 3-7 inspected; all three new scans, Steps 1-6, and retained verification content are fully placed within the report.",
+  "published_files": {
+    "Assignment3.ipynb": "C:\\Users\\alber\\Quantum-Computation_3\\Assignment3.ipynb",
+    "results.json": "C:\\Users\\alber\\Quantum-Computation_3\\results.json",
+    "Assignment3.pdf": "C:\\Users\\alber\\Quantum-Computation_3\\Assignment3.pdf",
+    "Assignment3.docx": "C:\\Users\\alber\\Quantum-Computation_3\\Assignment3.docx"
+  }
+}
